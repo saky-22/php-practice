@@ -149,5 +149,11 @@ $date->modify('-1 month');
 echo $date->format('Y-m-d');
 
 //問題2
+$date1 = strtotime("2025-12-02");
+$date2 = strtotime("1992-04-25");
 
+// 秒数を86400で割ると日数になります
+// 86400 = (60 * 60 * 24)
+$diff = ($date1 - $date2) / 86400; // 秒数を日数に変換
+echo 'あの日から' . $diff . '日経過しました。';
 ?>
