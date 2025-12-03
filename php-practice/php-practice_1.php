@@ -2,12 +2,18 @@
 // Q1 変数と文字列
 $name='安藤';
 echo '私の名前は「' .$name. '」です。';
+//3行目：nameという関数に安藤を指定
+//4行目：シングルクォーテーションで文字列を作る。関数の前後には、文字列結合演算子「.」がマスト
 
 // Q2 四則演算
 $num=5*4;
 echo $num . "\n";
 $num=5*4/2;
 echo $num;
+//9行目：5×4
+//10行目：\nで改行
+//11行目：5×4÷2
+//12行目：$num
 
 // Q3 日付操作
 date_default_timezone_set('Asia/Tokyo');
@@ -21,21 +27,19 @@ $second = date("s");
 
 echo "現在時刻は、" . $year . "年" . $month . "月" . $day . "日 "
     . $hour . "時" . $minute . "分" . $second . "秒です。";
+//19行目：現在時刻を取得
+//21～26行目：それぞれの関数を宣言する
+//28行目：文字列結合で出力する
 
 // Q4 条件分岐-1 if文
 $device = "windows";
 
-if ($device == "windows") {
-    echo "使用OSは、windowsです。";
+if ($device === "windows"||$device === "mac") {
+    echo "使用OSは、" .$device."です。";
 }
 else {
-    if ($device == "mac") {
-        echo "使用OSは、macです。";
-    }
-    else {
         echo "どちらでもありません。";
     }
-}
 
 // Q5 条件分岐-2 三項演算子
 $age = 20;
